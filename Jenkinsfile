@@ -5,7 +5,7 @@ pipeline {
         stage('git clone') {
             steps {
                 echo 'clonning the repo'
-                git url:"https://github.com/kajalkhade/pipeline1.git",branch:"main"
+                git url:https://github.com/prerana1237/aws-devops-cicd-k-s-automation.git",branch:"main"
             }
         }
         stage('Docker build') {
@@ -18,7 +18,7 @@ pipeline {
         stage('Docker run') {
             steps {
                 echo 'running the container'
-                sh 'docker run -it -d -p 3000:3000 --name kajal1234 myfirstnode1:latest'
+                sh 'docker run -it -d -p 3000:3000 --name preranapandhare myfirstnode1:latest'
             }
         }
     }
